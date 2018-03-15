@@ -1,21 +1,22 @@
-class samochody{
+class samochod{
     constructor(marka, model){
         this.marka = marka;
         this.model = model;
     }
 }
 
-class garaz{
+class parking{
     constructor(lista){
         this.lista = lista;
         this.samochody = [];
-
     }
+  dodaj(samochod) {
+     this.samochody.push(samochod);
+
+  }
 }
 
-garaz.samochody.push({marka: "Opel", model: "Vectra"});
-garaz.samochody.push({marka: "Toyota", model: "Corolla"});
-garaz.samochody.push({marka: "Fiat", model: "Tipo"});
-garaz.samochody.push({marka: "Audi", model: "Q7"});
+parking = new parking("Lista samochodw");
+parking.dodaj(new samochod("Opel", "Vectra"));
 
-console.log(garaz);
+console.log(parking);
